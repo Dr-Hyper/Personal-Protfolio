@@ -59,7 +59,7 @@ p {
 	font-size: 2rem;
 	font-weight: 500;
 	text-transform: uppercase;
-	letter-spacing: .5rem;
+	letter-spacing: .7rem;
 	margin-top: 30px;
 	transition: .3s ease;
 	transition-property: background-color, color;
@@ -86,11 +86,11 @@ p {
 .scroll-top{
 	height: 60px;
 	width: 60px;
-	background-color:rgb(255, 255, 255);
+	background-color: crimson;
 	position:fixed;
 	bottom: 10px;
 	right: 10px;
-	
+	/* cursor: pointer; */
 	border-radius: 6px;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.336);
 	display: flex;
@@ -103,12 +103,11 @@ p {
 	transform: scale(1);
 }
 .scroll-top svg {
-	width: 50%;
-	color: black;
+	width: 52%;
+	color: white;
 	pointer-events: none;
 }
 /* End top button style */
-/* cursor style */
 .cursor {
 	position: absolute;
 	left: 0;
@@ -137,7 +136,7 @@ p {
 	/* transform: translate(-50%, -50%) scale(3); */
 }
 .cursor.click::before{
-	animation: click 1s ease-in-out forwards;
+	animation: click .7s ease-in-out forwards;
 }
 /* End cursor style */
 
