@@ -4,6 +4,7 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	cursor: none;
 }
 html {
 	font-size: 10px;
@@ -78,6 +79,65 @@ p {
 	align-items: center;
 	justify-content: center;
 }
+/* top button style */
+.scroll-top{
+	height: 60px;
+	width: 60px;
+	background-color:rgb(255, 255, 255);
+	position:fixed;
+	bottom: 10px;
+	right: 10px;
+	cursor: pointer;
+	border-radius: 6px;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.336);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: scale(0.9);
+	transition: transform 0.3s ease;
+}
+.scroll-top:hover{
+	transform: scale(1);
+}
+.scroll-top svg {
+	width: 50%;
+	color: black;
+	pointer-events: none;
+}
+/* End top button style */
+/* cursor style */
+.cursor {
+	position: absolute;
+	left: 0;
+	top: 0;
+	/* border: 2px solid crimson; */
+	width: 30px;
+	height: 30px;
+	border-radius: 50px;
+	z-index: 1;
+	pointer-events: none;
+	transform: translate(-50%, -50%);
+}
+.cursor::after, .cursor::before{
+	content: '';
+	position: absolute;
+	width: 12px;
+	height: 11px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: crimson;
+	/* border-radius: 50px; */
+}
+.cursor::before{
+	background-color: crimson;
+	/* transform: translate(-50%, -50%) scale(3); */
+}
+.cursor.click::before{
+	animation: click 1s ease-in-out forwards;
+}
+/* End cursor style */
+
 /* Header section */
 #header {
 	position: fixed;
@@ -590,6 +650,17 @@ p {
 	100% {
 		color: crimson;
 		font-weight: bold;
+	}
+}
+@keyframes click{
+	0%{
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+	}
+	100%{
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(5);
+
 	}
 }
 /* End Keyframes */
