@@ -622,7 +622,7 @@ p {
 }
 /* End Footer */
 
-/* Keyframes */
+/* Keyframes. Taken from stackoverflow */ 
 @keyframes hamburger_puls {
 	0% {
 		opacity: 1;
